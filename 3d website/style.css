@@ -1,0 +1,190 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+    background-color: black;
+    color: #e7e7e7;
+    min-height: 100vh;
+}
+
+.image-gradient {
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0.5;
+    z-index: -1;
+}
+
+.layer-blur {
+    height: 0;
+    width: 30rem;
+    position: absolute;
+    top: 20%;
+    right: 0;
+    box-shadow: 0 0 700px 15px white;
+    rotate: -30deg;
+    z-index: -1;
+}
+
+.container {
+    /* background-color: ; */
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 2rem;
+    position: absolute;
+    overflow: hidden;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5rem;
+}
+
+header h1 {
+    margin: 0;
+    font-weight: 300;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    margin-left: -5%;
+}
+
+nav a {
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
+    transition: color 0.2s ease;
+    text-decoration: none;
+    color: inherit;
+}
+
+nav a:hover {
+    color: #a7a7a7;
+}
+
+.sign-button {
+    background-color: #a7a7a7;
+    padding: 5px 20px;
+    font: size 1rem;
+    border-radius: 50px;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+}
+
+.sign-button:hover {
+    background-color: #e7e7e7;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    min-height: calc(90vh - 6rem);
+}
+
+.content {
+    max-width: 40rem;
+    margin-left: 10%;
+    z-index: 999;
+}
+
+.tag-in {
+    position: relative;
+    width: 18rem;
+    height: 2.5rem;
+    border-radius: 50px;
+    background: rgb(63, 94, 251);
+    background: radial-gradient(circle, rgba(63, 94, 251, 1) 0%, rgba(252, 70, 107, 1) 100%);
+    background-size: 200%;
+    animation: animationgradient 2s linear infinite;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+    margin-bottom: 100p;
+}
+
+@keyframes animationgradient {
+    to {
+        background-position: 200%;
+    }
+}
+
+.tag-in .tag {
+    position: absolute;
+    inset: 3px 3px 3px 3px;
+    background-color: black;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s ease;
+}
+
+.tag-box .tag:hover {
+    color: #5300a0;
+    cursor: pointer;
+}
+.content h1{
+    font-size: 4rem;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+    margin: 2rem 0;
+    line-height: 1.2;
+    text-shadow: 0 0 10px rgba(128,128,128,0.418);
+
+}
+.content p{
+    font-size: 1.2rem;
+    letter-spacing: 0.05rem;
+    max-width: 35rem;
+    color: gray;
+}
+
+.buttons{
+    margin-top: 2rem;
+    display: flex;
+    gap: 2rem;
+}
+.buttons .button1{
+    text-decoration: none;
+    border: 1px solid #2a2a2a;
+    padding: 0.7rem 2rem;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+    transition: background-color 0.2s ease;
+}
+.buttons .button1:hover{
+    background-color: #1a1a1a;
+}
+.buttons .button2{
+    text-decoration: none;
+    background-color: lightgray;
+    color: black;
+    padding: 0.6rem 2.5rem;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+    transition: background-color 0.2s ease;
+}
+.buttons .button2:hover{
+    background-color: gray;
+}
+.robot-3d{
+    position: absolute;
+    top: 0;
+    right: -20%;
+}
+@media (max-width:1300px) {
+    nav{
+        display: none;
+    }
+}
